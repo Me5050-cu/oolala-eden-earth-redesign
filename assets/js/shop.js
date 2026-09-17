@@ -266,7 +266,12 @@
     const open = ev.target.closest('[data-product]');
     if (open) { openProduct(open.dataset.product); return; }
     const filter = ev.target.closest('[data-filter]');
-    if (filter) { applyFilter(filter.dataset.filter); return; }
+    if (filter) {
+      applyFilter(filter.dataset.filter);
+      const section = filter.closest('.shop-section');
+      if (section && section.getBoundingClientRect().top < 0) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
     if (ev.target.closest('[data-bag-open]')) { status(''); window.OOLALA.openDialog(drawer); return; }
     const line = ev.target.closest('[data-line]');
     if (line) { run(() => bagApi.update(line.dataset.line, Number(line.dataset.set))); return; }

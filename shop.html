@@ -56,31 +56,30 @@
   </header>
   <main id="main">
 
-    <section class="page-head" aria-labelledby="shop-title">
-      <div class="wrap narrow center">
-        <p class="eyebrow">Shop online</p>
+    <section class="shop-head" aria-labelledby="shop-title">
+      <div class="wrap">
+        <p class="slide-kicker">Shop online</p>
         <h1 id="shop-title">The Eden Earth Collection</h1>
-        <p class="lede">Home goods, apparel, fragrance, wellness and jewelry, chosen to make everyday living a devotional act. Ships anywhere, or pick it up at OoLaLa on the Square.</p>
+        <p class="shop-head-lede">Ships anywhere, or pick it up at OoLaLa on the Square.</p>
       </div>
-      <dl class="wrap facts facts-small">
-        <div><dt>Pickup on the Square</dt><dd>Choose local pickup at checkout</dd></div>
-        <div><dt>Gift wrapping</dt><dd>Free at the counter, just ask</dd></div>
-        <div><dt>Secure checkout</dt><dd>Powered by Shopify</dd></div>
-      </dl>
     </section>
 
-    <section class="section section-white shop-section" aria-label="Products">
-      <div class="wrap">
-        <div class="filters" role="toolbar" aria-label="Filter by category" data-filters>
-          <button type="button" data-filter="All" aria-pressed="true">All</button>
-          <button type="button" data-filter="Jewelry" aria-pressed="false">Jewelry</button>
-          <button type="button" data-filter="Fragrance" aria-pressed="false">Fragrance</button>
-          <button type="button" data-filter="Wellness" aria-pressed="false">Wellness</button>
-          <button type="button" data-filter="Apparel" aria-pressed="false">Apparel</button>
-          <button type="button" data-filter="Home" aria-pressed="false">Home</button>
-          <button type="button" data-filter="Accessories" aria-pressed="false">Accessories</button>
+    <section class="shop-section" aria-label="Products">
+      <div class="shop-bar">
+        <div class="wrap shop-bar-inner">
+          <div class="filters" role="toolbar" aria-label="Filter by category" data-filters>
+            <button type="button" data-filter="All" aria-pressed="true">All</button>
+            <button type="button" data-filter="Jewelry" aria-pressed="false">Jewelry</button>
+            <button type="button" data-filter="Fragrance" aria-pressed="false">Fragrance</button>
+            <button type="button" data-filter="Wellness" aria-pressed="false">Wellness</button>
+            <button type="button" data-filter="Apparel" aria-pressed="false">Apparel</button>
+            <button type="button" data-filter="Home" aria-pressed="false">Home</button>
+            <button type="button" data-filter="Accessories" aria-pressed="false">Accessories</button>
+          </div>
+          <p class="filter-tagline" data-filter-tagline aria-live="polite"></p>
         </div>
-        <p class="filter-tagline" data-filter-tagline aria-live="polite"></p>
+      </div>
+      <div class="wrap">
         <ul class="product-grid" data-products data-filterable>
           <li class="product" data-category="Jewelry">
             <button class="product-open" type="button" data-product="green-cross-pendant">
@@ -174,6 +173,11 @@
           </li>
         </ul>
         <p class="shop-state" data-shop-state hidden></p>
+        <dl class="shop-perks">
+          <div><dt>Pickup on the Square</dt><dd>Choose local pickup at checkout</dd></div>
+          <div><dt>Gift wrapping</dt><dd>Free at the counter, just ask</dd></div>
+          <div><dt>Secure checkout</dt><dd>Powered by Shopify</dd></div>
+        </dl>
       </div>
     </section>
 
