@@ -15,9 +15,8 @@
   <meta property="og:image" content="https://me5050-cu.github.io/oolala-eden-earth-redesign/assets/img/share.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap">
+  <link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"OoLaLa Unique Gifts","description":"OoLaLa is a family boutique on the Georgetown Square: fashion, décor, jewelry, perfume and luxe apothecary, personal styling, and the home of the Eden Earth collection.","telephone":"+15126885707","foundingDate":"2006","image":"https://me5050-cu.github.io/oolala-eden-earth-redesign/assets/img/share.jpg","url":"https://me5050-cu.github.io/oolala-eden-earth-redesign/","address":{"@type":"PostalAddress","streetAddress":"714 S Austin Ave","addressLocality":"Georgetown","addressRegion":"TX","postalCode":"78626","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"12:00","closes":"18:00"}],"department":{"@type":"Store","name":"Eden Earth","sameAs":["https://www.instagram.com/eden.earth/","https://edenearth.shop"]},"sameAs":["https://www.instagram.com/oolalagifts/","https://www.facebook.com/p/OoLala-Georgetown-100054103392312/"]}</script>
 </head>
@@ -32,16 +31,16 @@
         <a href="eden-earth.html#gatherings">Gatherings</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menu</button>
-      <a class="wordmark" href="index.html" aria-label="OoLaLa home">
+      <a class="wordmark" href="index.html">
         <span class="wordmark-name">OoLaLa</span>
         <span class="wordmark-sub">Georgetown Square</span>
       </a>
       <nav class="nav nav-right" aria-label="Visit">
         <a href="visit.html#styling">Styling</a>
         <a href="visit.html">Visit</a>
-        <button class="bag-toggle" type="button" data-bag-open aria-label="Open bag">Bag <span class="bag-count" data-bag-count>0</span></button>
+        <button class="bag-toggle" type="button" data-bag-open>Bag <span class="bag-count" data-bag-count>0</span><span class="sr-only"> items</span></button>
       </nav>
-      <button class="bag-toggle bag-toggle-mobile" type="button" data-bag-open aria-label="Open bag">Bag <span class="bag-count" data-bag-count>0</span></button>
+      <button class="bag-toggle bag-toggle-mobile" type="button" data-bag-open>Bag <span class="bag-count" data-bag-count>0</span><span class="sr-only"> items</span></button>
     </div>
     <div class="menu" id="menu" hidden data-menu>
       <nav aria-label="Menu">
@@ -58,7 +57,7 @@
   <main id="main">
 
     <section class="hero hero-photo" aria-labelledby="eden-hero-title">
-      <div class="hero-media"><img src="assets/img/eden/white-horse.jpg" alt="A white horse drinking from a still, dark pond" width="1312" height="823" fetchpriority="high" decoding="async"></div>
+      <div class="hero-media"><img src="assets/img/eden/white-horse.jpg" srcset="assets/img/eden/white-horse-400.webp 400w, assets/img/eden/white-horse-640.webp 640w, assets/img/eden/white-horse-960.webp 960w, assets/img/eden/white-horse-1280.webp 1280w, assets/img/eden/white-horse-1312.webp 1312w" sizes="100vw" alt="A white horse drinking from a still, dark pond" width="1312" height="823" fetchpriority="high" decoding="async"></div>
       <div class="hero-content">
         <p class="eyebrow on-dark">On earth as it is in heaven</p>
         <h1 id="eden-hero-title" class="hero-wordmark">Eden Earth</h1>
@@ -71,7 +70,7 @@
     </section>
 
     <section class="split split-reverse" aria-labelledby="letter-title">
-      <div class="split-media"><img src="assets/img/eden/eden-candle.jpg" alt="The signature Eden candle among white blossoms and willows" width="1400" height="1866" loading="lazy" decoding="async"></div>
+      <div class="split-media"><img src="assets/img/eden/eden-candle.jpg" srcset="assets/img/eden/eden-candle-400.webp 400w, assets/img/eden/eden-candle-640.webp 640w, assets/img/eden/eden-candle-960.webp 960w, assets/img/eden/eden-candle-1280.webp 1280w, assets/img/eden/eden-candle-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw" alt="The signature Eden candle among white blossoms and willows" width="1400" height="1866" loading="lazy" decoding="async"></div>
       <div class="split-body letter">
         <p class="eyebrow">A note from Kristina</p>
         <h2 id="letter-title">Beauty can be holy.</h2>
@@ -130,22 +129,22 @@
         </div>
         <ul class="gatherings">
           <li>
-            <div class="gathering-media"><img src="assets/img/eden/crystal-rose-clutch.jpg" alt="Crystal rose clutch from the Eden Earth collection" width="1100" height="1375" loading="lazy" decoding="async"></div>
+            <div class="gathering-media"><img src="assets/img/eden/crystal-rose-clutch.jpg" srcset="assets/img/eden/crystal-rose-clutch-400.webp 400w, assets/img/eden/crystal-rose-clutch-640.webp 640w, assets/img/eden/crystal-rose-clutch-960.webp 960w, assets/img/eden/crystal-rose-clutch-1100.webp 1100w" sizes="(max-width: 560px) 92vw, (max-width: 1080px) 46vw, 300px" alt="Crystal rose clutch from the Eden Earth collection" width="1100" height="1375" loading="lazy" decoding="async"></div>
             <h3>Collection launches</h3>
             <p>Each season we open the doors early for our community, with a first look at new arrivals.</p>
           </li>
           <li>
-            <div class="gathering-media"><img src="assets/img/eden/hydrangea-garden.jpg" alt="Hydrangeas along a garden path" width="1100" height="1375" loading="lazy" decoding="async"></div>
+            <div class="gathering-media"><img src="assets/img/eden/hydrangea-garden.jpg" srcset="assets/img/eden/hydrangea-garden-400.webp 400w, assets/img/eden/hydrangea-garden-640.webp 640w, assets/img/eden/hydrangea-garden-960.webp 960w, assets/img/eden/hydrangea-garden-1100.webp 1100w" sizes="(max-width: 560px) 92vw, (max-width: 1080px) 46vw, 300px" alt="Hydrangeas along a garden path" width="1100" height="1375" loading="lazy" decoding="async"></div>
             <h3>Creative workshops</h3>
             <p>Dream board nights, Bible journaling, free-flow canvas painting, and the foundations of anointing oil.</p>
           </li>
           <li id="book-club">
-            <div class="gathering-media"><img src="assets/img/eden/book-faith-to-flourish.jpg" alt="The Faith to Flourish by Christine Caine on white fabric" width="1100" height="1375" loading="lazy" decoding="async"></div>
+            <div class="gathering-media"><img src="assets/img/eden/book-faith-to-flourish.jpg" srcset="assets/img/eden/book-faith-to-flourish-400.webp 400w, assets/img/eden/book-faith-to-flourish-640.webp 640w, assets/img/eden/book-faith-to-flourish-900.webp 900w" sizes="(max-width: 560px) 92vw, (max-width: 1080px) 46vw, 300px" alt="The Faith to Flourish by Christine Caine on white fabric" width="1100" height="1375" loading="lazy" decoding="async"></div>
             <h3>The Eden Earth Book Club</h3>
             <p>A new book each month. Readers who buy the season’s book gather to discuss it, with author visits and signings.</p>
           </li>
           <li>
-            <div class="gathering-media"><img src="assets/img/eden/statue.jpg" alt="Marble sculpture of Psyche and the winged Eros" width="1100" height="1375" loading="lazy" decoding="async"></div>
+            <div class="gathering-media"><img src="assets/img/eden/statue.jpg" srcset="assets/img/eden/statue-400.webp 400w, assets/img/eden/statue-640.webp 640w, assets/img/eden/statue-960.webp 960w, assets/img/eden/statue-1100.webp 1100w" sizes="(max-width: 560px) 92vw, (max-width: 1080px) 46vw, 300px" alt="Marble sculpture of Psyche and the winged Eros" width="1100" height="1375" loading="lazy" decoding="async"></div>
             <h3>Healing &amp; prayer</h3>
             <p>Space set apart for Spirit-led prayer, healing and deliverance. Come as you are and leave lighter, rooted and restored.</p>
           </li>
@@ -154,7 +153,7 @@
     </section>
 
     <section class="studio" aria-labelledby="studio-title">
-      <img class="studio-img" src="assets/img/eden/garden-path.jpg" alt="Stone path through white-flowering groundcover" width="1310" height="1256" loading="lazy" decoding="async">
+      <img class="studio-img" src="assets/img/eden/garden-path.jpg" srcset="assets/img/eden/garden-path-400.webp 400w, assets/img/eden/garden-path-640.webp 640w, assets/img/eden/garden-path-960.webp 960w, assets/img/eden/garden-path-1280.webp 1280w, assets/img/eden/garden-path-1310.webp 1310w" sizes="100vw" alt="Stone path through white-flowering groundcover" width="1310" height="1256" loading="lazy" decoding="async">
       <div class="studio-body">
         <p class="eyebrow on-dark">Studio space</p>
         <h2 id="studio-title">Host your own gathering</h2>

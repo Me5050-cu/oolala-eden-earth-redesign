@@ -15,9 +15,8 @@
   <meta property="og:image" content="https://me5050-cu.github.io/oolala-eden-earth-redesign/assets/img/share.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap">
+  <link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"OoLaLa Unique Gifts","description":"OoLaLa is a family boutique on the Georgetown Square: fashion, décor, jewelry, perfume and luxe apothecary, personal styling, and the home of the Eden Earth collection.","telephone":"+15126885707","foundingDate":"2006","image":"https://me5050-cu.github.io/oolala-eden-earth-redesign/assets/img/share.jpg","url":"https://me5050-cu.github.io/oolala-eden-earth-redesign/","address":{"@type":"PostalAddress","streetAddress":"714 S Austin Ave","addressLocality":"Georgetown","addressRegion":"TX","postalCode":"78626","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"12:00","closes":"18:00"}],"department":{"@type":"Store","name":"Eden Earth","sameAs":["https://www.instagram.com/eden.earth/","https://edenearth.shop"]},"sameAs":["https://www.instagram.com/oolalagifts/","https://www.facebook.com/p/OoLala-Georgetown-100054103392312/"]}</script>
 </head>
@@ -32,16 +31,16 @@
         <a href="eden-earth.html#gatherings">Gatherings</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menu</button>
-      <a class="wordmark" href="index.html" aria-label="OoLaLa home">
+      <a class="wordmark" href="index.html">
         <span class="wordmark-name">OoLaLa</span>
         <span class="wordmark-sub">Georgetown Square</span>
       </a>
       <nav class="nav nav-right" aria-label="Visit">
         <a href="visit.html#styling">Styling</a>
         <a href="visit.html" aria-current="page">Visit</a>
-        <button class="bag-toggle" type="button" data-bag-open aria-label="Open bag">Bag <span class="bag-count" data-bag-count>0</span></button>
+        <button class="bag-toggle" type="button" data-bag-open>Bag <span class="bag-count" data-bag-count>0</span><span class="sr-only"> items</span></button>
       </nav>
-      <button class="bag-toggle bag-toggle-mobile" type="button" data-bag-open aria-label="Open bag">Bag <span class="bag-count" data-bag-count>0</span></button>
+      <button class="bag-toggle bag-toggle-mobile" type="button" data-bag-open>Bag <span class="bag-count" data-bag-count>0</span><span class="sr-only"> items</span></button>
     </div>
     <div class="menu" id="menu" hidden data-menu>
       <nav aria-label="Menu">
@@ -58,7 +57,7 @@
   <main id="main">
 
     <section class="split page-split" aria-labelledby="visit-page-title">
-      <div class="split-media"><img src="assets/img/shop/pearl-bracelets.jpg" alt="A glass bowl of pearl stretch bracelets with a handwritten sign at OoLaLa" width="1200" height="1599" fetchpriority="high" decoding="async"></div>
+      <div class="split-media"><img src="assets/img/shop/pearl-bracelets.jpg" srcset="assets/img/shop/pearl-bracelets-400.webp 400w, assets/img/shop/pearl-bracelets-640.webp 640w, assets/img/shop/pearl-bracelets-960.webp 960w, assets/img/shop/pearl-bracelets-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 50vw" alt="A glass bowl of pearl stretch bracelets with a handwritten sign at OoLaLa" width="1200" height="1600" fetchpriority="high" decoding="async"></div>
       <div class="split-body">
         <p class="eyebrow">Visit</p>
         <h1 id="visit-page-title">Find us on the Square</h1>

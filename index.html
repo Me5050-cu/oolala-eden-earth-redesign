@@ -15,11 +15,10 @@
   <meta property="og:image" content="https://me5050-cu.github.io/oolala-eden-earth-redesign/assets/img/share.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap">
+  <link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
-  <link rel="preload" as="image" href="assets/media/lake-poster.jpg">
+  <link rel="preload" as="image" href="assets/media/lake-poster-720.jpg">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"OoLaLa Unique Gifts","description":"OoLaLa is a family boutique on the Georgetown Square: fashion, décor, jewelry, perfume and luxe apothecary, personal styling, and the home of the Eden Earth collection.","telephone":"+15126885707","foundingDate":"2006","image":"https://me5050-cu.github.io/oolala-eden-earth-redesign/assets/img/share.jpg","url":"https://me5050-cu.github.io/oolala-eden-earth-redesign/","address":{"@type":"PostalAddress","streetAddress":"714 S Austin Ave","addressLocality":"Georgetown","addressRegion":"TX","postalCode":"78626","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"12:00","closes":"18:00"}],"department":{"@type":"Store","name":"Eden Earth","sameAs":["https://www.instagram.com/eden.earth/","https://edenearth.shop"]},"sameAs":["https://www.instagram.com/oolalagifts/","https://www.facebook.com/p/OoLala-Georgetown-100054103392312/"]}</script>
 </head>
 <body class="page-home">
@@ -33,16 +32,16 @@
         <a href="eden-earth.html#gatherings">Gatherings</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menu</button>
-      <a class="wordmark" href="index.html" aria-label="OoLaLa home">
+      <a class="wordmark" href="index.html">
         <span class="wordmark-name">OoLaLa</span>
         <span class="wordmark-sub">Georgetown Square</span>
       </a>
       <nav class="nav nav-right" aria-label="Visit">
         <a href="visit.html#styling">Styling</a>
         <a href="visit.html">Visit</a>
-        <button class="bag-toggle" type="button" data-bag-open aria-label="Open bag">Bag <span class="bag-count" data-bag-count>0</span></button>
+        <button class="bag-toggle" type="button" data-bag-open>Bag <span class="bag-count" data-bag-count>0</span><span class="sr-only"> items</span></button>
       </nav>
-      <button class="bag-toggle bag-toggle-mobile" type="button" data-bag-open aria-label="Open bag">Bag <span class="bag-count" data-bag-count>0</span></button>
+      <button class="bag-toggle bag-toggle-mobile" type="button" data-bag-open>Bag <span class="bag-count" data-bag-count>0</span><span class="sr-only"> items</span></button>
     </div>
     <div class="menu" id="menu" hidden data-menu>
       <nav aria-label="Menu">
@@ -60,7 +59,8 @@
 
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-media">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/media/lake-poster.jpg" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/media/lake-poster-720.jpg" aria-hidden="true">
+          <source src="assets/media/lake-720.mp4" type="video/mp4" media="(max-width: 760px)">
           <source src="assets/media/lake.mp4" type="video/mp4">
         </video>
       </div>
@@ -97,7 +97,7 @@
         <ul class="tiles">
           <li class="tile">
             <figure>
-              <div class="tile-media"><img src="assets/img/shop/floral-dress.jpg" alt="White dress with jeweled flower appliqués on a mannequin at OoLaLa" width="1200" height="1600" loading="lazy" decoding="async"></div>
+              <div class="tile-media"><img src="assets/img/shop/floral-dress.jpg" srcset="assets/img/shop/floral-dress-400.webp 400w, assets/img/shop/floral-dress-640.webp 640w, assets/img/shop/floral-dress-960.webp 960w, assets/img/shop/floral-dress-1200.webp 1200w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="White dress with jeweled flower appliqués on a mannequin at OoLaLa" width="1200" height="1600" loading="lazy" decoding="async"></div>
               <figcaption>
                 <h3>Fashion</h3>
                 <p>Hand-picked clothing, with styling from head to toe.</p>
@@ -106,7 +106,7 @@
           </li>
           <li class="tile">
             <figure>
-              <div class="tile-media"><img src="assets/img/shop/crystal-clutches.jpg" alt="Gold crystal-studded clutches on a display stand" width="1200" height="1600" loading="lazy" decoding="async"></div>
+              <div class="tile-media"><img src="assets/img/shop/crystal-clutches.jpg" srcset="assets/img/shop/crystal-clutches-400.webp 400w, assets/img/shop/crystal-clutches-640.webp 640w, assets/img/shop/crystal-clutches-960.webp 960w, assets/img/shop/crystal-clutches-1200.webp 1200w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Gold crystal-studded clutches on a display stand" width="1200" height="1600" loading="lazy" decoding="async"></div>
               <figcaption>
                 <h3>Jewelry &amp; bags</h3>
                 <p>Crystal clutches, pearls and handmade jewelry.</p>
@@ -115,7 +115,7 @@
           </li>
           <li class="tile">
             <figure>
-              <div class="tile-media"><img src="assets/img/shop/etagere.jpg" alt="Gold étagère styled with frames, gifts and books" width="1200" height="1600" loading="lazy" decoding="async"></div>
+              <div class="tile-media"><img src="assets/img/shop/etagere.jpg" srcset="assets/img/shop/etagere-400.webp 400w, assets/img/shop/etagere-640.webp 640w, assets/img/shop/etagere-960.webp 960w, assets/img/shop/etagere-1200.webp 1200w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Gold étagère styled with frames, gifts and books" width="1200" height="1600" loading="lazy" decoding="async"></div>
               <figcaption>
                 <h3>Décor &amp; gifts</h3>
                 <p>Frames, gilded trays, books and finishing touches.</p>
@@ -124,7 +124,7 @@
           </li>
           <li class="tile">
             <figure>
-              <div class="tile-media"><img src="assets/img/shop/candle-jars.jpg" alt="Blue and white porcelain candle jars" width="1200" height="1600" loading="lazy" decoding="async"></div>
+              <div class="tile-media"><img src="assets/img/shop/candle-jars.jpg" srcset="assets/img/shop/candle-jars-400.webp 400w, assets/img/shop/candle-jars-640.webp 640w, assets/img/shop/candle-jars-960.webp 960w, assets/img/shop/candle-jars-1200.webp 1200w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Blue and white porcelain candle jars" width="1200" height="1600" loading="lazy" decoding="async"></div>
               <figcaption>
                 <h3>Perfume &amp; apothecary</h3>
                 <p>Signature scents, candles and bath rituals.</p>
@@ -136,7 +136,7 @@
     </section>
 
     <section class="split" aria-labelledby="eden-title">
-      <div class="split-media"><img src="assets/img/eden/gods-favorite-lilypads.jpg" alt="Gold God’s Favorite necklaces and earrings resting on lily pads" width="1086" height="1448" loading="lazy" decoding="async"></div>
+      <div class="split-media"><img src="assets/img/eden/gods-favorite-lilypads.jpg" srcset="assets/img/eden/gods-favorite-lilypads-400.webp 400w, assets/img/eden/gods-favorite-lilypads-640.webp 640w, assets/img/eden/gods-favorite-lilypads-960.webp 960w, assets/img/eden/gods-favorite-lilypads-1086.webp 1086w" sizes="(max-width: 860px) 100vw, 50vw" alt="Gold God’s Favorite necklaces and earrings resting on lily pads" width="1086" height="1448" loading="lazy" decoding="async"></div>
       <div class="split-body">
         <p class="eyebrow">Inside OoLaLa</p>
         <h2 id="eden-title">The home of Eden Earth</h2>
@@ -161,7 +161,7 @@
         <ul class="product-grid" data-products data-limit="4">
           <li class="product" data-category="Jewelry">
             <button class="product-open" type="button" data-product="green-cross-pendant">
-              <span class="product-media"><img src="assets/img/products/green-cross-pendant.jpg" alt="Green Cross Pendant Necklace" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/green-cross-pendant.jpg" srcset="assets/img/products/green-cross-pendant-400.webp 400w, assets/img/products/green-cross-pendant-640.webp 640w, assets/img/products/green-cross-pendant-900.webp 900w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Green Cross Pendant Necklace" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Green Cross Pendant Necklace</span>
                 <span class="product-price">$64.00</span>
@@ -170,7 +170,7 @@
           </li>
           <li class="product" data-category="Fragrance">
             <button class="product-open" type="button" data-product="white-lily-violet">
-              <span class="product-media"><img src="assets/img/products/white-lily-violet.jpg" alt="White Lily &amp; Violet" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/white-lily-violet.jpg" srcset="assets/img/products/white-lily-violet-400.webp 400w, assets/img/products/white-lily-violet-640.webp 640w, assets/img/products/white-lily-violet-900.webp 900w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="White Lily &amp; Violet" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">White Lily &amp; Violet</span>
                 <span class="product-price">$120.00</span>
@@ -179,7 +179,7 @@
           </li>
           <li class="product" data-category="Wellness">
             <button class="product-open" type="button" data-product="botanical-body-oil">
-              <span class="product-media"><img src="assets/img/products/botanical-body-oil.jpg" alt="Botanical Body Oil" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/botanical-body-oil.jpg" srcset="assets/img/products/botanical-body-oil-400.webp 400w, assets/img/products/botanical-body-oil-640.webp 640w, assets/img/products/botanical-body-oil-724.webp 724w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Botanical Body Oil" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Botanical Body Oil</span>
                 <span class="product-price">$32.00</span>
@@ -188,7 +188,7 @@
           </li>
           <li class="product" data-category="Apparel">
             <button class="product-open" type="button" data-product="feather-cuff-dress">
-              <span class="product-media"><img src="assets/img/products/feather-cuff-dress.jpg" alt="Embroidered Feather-Cuff Dress" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/feather-cuff-dress.jpg" srcset="assets/img/products/feather-cuff-dress-400.webp 400w, assets/img/products/feather-cuff-dress-640.webp 640w, assets/img/products/feather-cuff-dress-900.webp 900w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Embroidered Feather-Cuff Dress" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Embroidered Feather-Cuff Dress</span>
                 <span class="product-price">$88.00</span>
@@ -207,13 +207,13 @@
         </div>
         <div class="exclusive-grid">
           <article class="exclusive">
-            <div class="exclusive-media"><img src="assets/img/eden/eden-candle.jpg" alt="The Eden candle among white blossoms, willows and swans" width="1100" height="1375" loading="lazy" decoding="async"></div>
+            <div class="exclusive-media"><img src="assets/img/eden/eden-candle.jpg" srcset="assets/img/eden/eden-candle-400.webp 400w, assets/img/eden/eden-candle-640.webp 640w, assets/img/eden/eden-candle-960.webp 960w, assets/img/eden/eden-candle-1280.webp 1280w, assets/img/eden/eden-candle-1400.webp 1400w" sizes="(max-width: 760px) 92vw, (max-width: 1320px) 44vw, 580px" alt="The Eden candle among white blossoms, willows and swans" width="1100" height="1375" loading="lazy" decoding="async"></div>
             <p class="exclusive-kicker">The signature Eden candle</p>
             <h3>Verdant air. White petals. Living water.</h3>
             <p>Hyacinth, white water lily and emerald moss, in a clean-burning candle poured exclusively by Rust &amp; Rose. Available only in the shop at OoLaLa.</p>
           </article>
           <article class="exclusive">
-            <div class="exclusive-media"><img src="assets/img/eden/gods-favorite-cross.jpg" alt="Gold cross necklace from God’s Favorite resting on a lily pad" width="1100" height="1375" loading="lazy" decoding="async"></div>
+            <div class="exclusive-media"><img src="assets/img/eden/gods-favorite-cross.jpg" srcset="assets/img/eden/gods-favorite-cross-400.webp 400w, assets/img/eden/gods-favorite-cross-640.webp 640w, assets/img/eden/gods-favorite-cross-960.webp 960w, assets/img/eden/gods-favorite-cross-1100.webp 1100w" sizes="(max-width: 760px) 92vw, (max-width: 1320px) 44vw, 580px" alt="Gold cross necklace from God’s Favorite resting on a lily pad" width="1100" height="1375" loading="lazy" decoding="async"></div>
             <p class="exclusive-kicker">God’s Favorite jewelry</p>
             <h3>Rings and earrings that each carry a verse</h3>
             <p>Eden Earth is the first shop to carry the God’s Favorite collection. It restocks often and sells quickly, so come by to see the newest pieces.</p>

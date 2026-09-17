@@ -15,9 +15,8 @@
   <meta property="og:image" content="https://me5050-cu.github.io/oolala-eden-earth-redesign/assets/img/share.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap">
+  <link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"OoLaLa Unique Gifts","description":"OoLaLa is a family boutique on the Georgetown Square: fashion, décor, jewelry, perfume and luxe apothecary, personal styling, and the home of the Eden Earth collection.","telephone":"+15126885707","foundingDate":"2006","image":"https://me5050-cu.github.io/oolala-eden-earth-redesign/assets/img/share.jpg","url":"https://me5050-cu.github.io/oolala-eden-earth-redesign/","address":{"@type":"PostalAddress","streetAddress":"714 S Austin Ave","addressLocality":"Georgetown","addressRegion":"TX","postalCode":"78626","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"12:00","closes":"18:00"}],"department":{"@type":"Store","name":"Eden Earth","sameAs":["https://www.instagram.com/eden.earth/","https://edenearth.shop"]},"sameAs":["https://www.instagram.com/oolalagifts/","https://www.facebook.com/p/OoLala-Georgetown-100054103392312/"]}</script>
 </head>
@@ -32,16 +31,16 @@
         <a href="eden-earth.html#gatherings">Gatherings</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menu</button>
-      <a class="wordmark" href="index.html" aria-label="OoLaLa home">
+      <a class="wordmark" href="index.html">
         <span class="wordmark-name">OoLaLa</span>
         <span class="wordmark-sub">Georgetown Square</span>
       </a>
       <nav class="nav nav-right" aria-label="Visit">
         <a href="visit.html#styling">Styling</a>
         <a href="visit.html">Visit</a>
-        <button class="bag-toggle" type="button" data-bag-open aria-label="Open bag">Bag <span class="bag-count" data-bag-count>0</span></button>
+        <button class="bag-toggle" type="button" data-bag-open>Bag <span class="bag-count" data-bag-count>0</span><span class="sr-only"> items</span></button>
       </nav>
-      <button class="bag-toggle bag-toggle-mobile" type="button" data-bag-open aria-label="Open bag">Bag <span class="bag-count" data-bag-count>0</span></button>
+      <button class="bag-toggle bag-toggle-mobile" type="button" data-bag-open>Bag <span class="bag-count" data-bag-count>0</span><span class="sr-only"> items</span></button>
     </div>
     <div class="menu" id="menu" hidden data-menu>
       <nav aria-label="Menu">
@@ -85,7 +84,7 @@
         <ul class="product-grid" data-products data-filterable>
           <li class="product" data-category="Jewelry">
             <button class="product-open" type="button" data-product="green-cross-pendant">
-              <span class="product-media"><img src="assets/img/products/green-cross-pendant.jpg" alt="Green Cross Pendant Necklace" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/green-cross-pendant.jpg" srcset="assets/img/products/green-cross-pendant-400.webp 400w, assets/img/products/green-cross-pendant-640.webp 640w, assets/img/products/green-cross-pendant-900.webp 900w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Green Cross Pendant Necklace" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Green Cross Pendant Necklace</span>
                 <span class="product-price">$64.00</span>
@@ -94,7 +93,7 @@
           </li>
           <li class="product" data-category="Fragrance">
             <button class="product-open" type="button" data-product="white-lily-violet">
-              <span class="product-media"><img src="assets/img/products/white-lily-violet.jpg" alt="White Lily &amp; Violet" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/white-lily-violet.jpg" srcset="assets/img/products/white-lily-violet-400.webp 400w, assets/img/products/white-lily-violet-640.webp 640w, assets/img/products/white-lily-violet-900.webp 900w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="White Lily &amp; Violet" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">White Lily &amp; Violet</span>
                 <span class="product-price">$120.00</span>
@@ -103,7 +102,7 @@
           </li>
           <li class="product" data-category="Wellness">
             <button class="product-open" type="button" data-product="botanical-body-oil">
-              <span class="product-media"><img src="assets/img/products/botanical-body-oil.jpg" alt="Botanical Body Oil" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/botanical-body-oil.jpg" srcset="assets/img/products/botanical-body-oil-400.webp 400w, assets/img/products/botanical-body-oil-640.webp 640w, assets/img/products/botanical-body-oil-724.webp 724w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Botanical Body Oil" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Botanical Body Oil</span>
                 <span class="product-price">$32.00</span>
@@ -112,7 +111,7 @@
           </li>
           <li class="product" data-category="Apparel">
             <button class="product-open" type="button" data-product="feather-cuff-dress">
-              <span class="product-media"><img src="assets/img/products/feather-cuff-dress.jpg" alt="Embroidered Feather-Cuff Dress" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/feather-cuff-dress.jpg" srcset="assets/img/products/feather-cuff-dress-400.webp 400w, assets/img/products/feather-cuff-dress-640.webp 640w, assets/img/products/feather-cuff-dress-900.webp 900w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Embroidered Feather-Cuff Dress" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Embroidered Feather-Cuff Dress</span>
                 <span class="product-price">$88.00</span>
@@ -121,7 +120,7 @@
           </li>
           <li class="product" data-category="Jewelry">
             <button class="product-open" type="button" data-product="petal-drop-earrings">
-              <span class="product-media"><img src="assets/img/products/petal-drop-earrings.jpg" alt="Petal Drop Earrings" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/petal-drop-earrings.jpg" srcset="assets/img/products/petal-drop-earrings-400.webp 400w, assets/img/products/petal-drop-earrings-640.webp 640w, assets/img/products/petal-drop-earrings-900.webp 900w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Petal Drop Earrings" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Petal Drop Earrings</span>
                 <span class="product-price">$36.00</span>
@@ -130,7 +129,7 @@
           </li>
           <li class="product" data-category="Fragrance">
             <button class="product-open" type="button" data-product="anointed-eau-de-parfum">
-              <span class="product-media"><img src="assets/img/products/anointed-eau-de-parfum.jpg" alt="Anointed Eau de Parfum" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/anointed-eau-de-parfum.jpg" srcset="assets/img/products/anointed-eau-de-parfum-400.webp 400w, assets/img/products/anointed-eau-de-parfum-640.webp 640w, assets/img/products/anointed-eau-de-parfum-820.webp 820w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Anointed Eau de Parfum" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Anointed Eau de Parfum</span>
                 <span class="product-price">$72.00</span>
@@ -139,7 +138,7 @@
           </li>
           <li class="product" data-category="Home">
             <button class="product-open" type="button" data-product="garden-prayer-candles">
-              <span class="product-media"><img src="assets/img/products/garden-prayer-candles.jpg" alt="Garden Prayer Candles" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/garden-prayer-candles.jpg" srcset="assets/img/products/garden-prayer-candles-400.webp 400w, assets/img/products/garden-prayer-candles-640.webp 640w, assets/img/products/garden-prayer-candles-900.webp 900w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Garden Prayer Candles" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Garden Prayer Candles</span>
                 <span class="product-price">$32.00</span>
@@ -148,7 +147,7 @@
           </li>
           <li class="product" data-category="Accessories">
             <button class="product-open" type="button" data-product="willow-silk-scarf">
-              <span class="product-media"><img src="assets/img/products/willow-silk-scarf.jpg" alt="Willow Silk Scarf" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/willow-silk-scarf.jpg" srcset="assets/img/products/willow-silk-scarf-400.webp 400w, assets/img/products/willow-silk-scarf-566.webp 566w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Willow Silk Scarf" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Willow Silk Scarf</span>
                 <span class="product-price">$58.00</span>
@@ -157,7 +156,7 @@
           </li>
           <li class="product" data-category="Home">
             <button class="product-open" type="button" data-product="etched-stem-glasses">
-              <span class="product-media"><img src="assets/img/products/etched-stem-glasses.jpg" alt="Etched Stem Glasses" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/etched-stem-glasses.jpg" srcset="assets/img/products/etched-stem-glasses-400.webp 400w, assets/img/products/etched-stem-glasses-640.webp 640w, assets/img/products/etched-stem-glasses-900.webp 900w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Etched Stem Glasses" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Etched Stem Glasses</span>
                 <span class="product-price">$44.00</span>
@@ -166,7 +165,7 @@
           </li>
           <li class="product" data-category="Home">
             <button class="product-open" type="button" data-product="crystal-butterfly">
-              <span class="product-media"><img src="assets/img/products/crystal-butterfly.jpg" alt="Crystal Butterfly" width="720" height="900" loading="lazy" decoding="async"></span>
+              <span class="product-media"><img src="assets/img/products/crystal-butterfly.jpg" srcset="assets/img/products/crystal-butterfly-400.webp 400w, assets/img/products/crystal-butterfly-461.webp 461w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Crystal Butterfly" width="720" height="900" loading="lazy" decoding="async"></span>
               <span class="product-meta">
                 <span class="product-name">Crystal Butterfly</span>
                 <span class="product-price">$28.00</span>
@@ -197,42 +196,42 @@
         </div>
         <ul class="shelf">
           <li>
-            <div class="shelf-cover"><img src="assets/img/books/faith-to-flourish.jpg" alt="The Faith to Flourish cover" width="600" height="600" loading="lazy" decoding="async"></div>
+            <div class="shelf-cover"><img src="assets/img/books/faith-to-flourish.jpg" srcset="assets/img/books/faith-to-flourish-400.webp 400w, assets/img/books/faith-to-flourish-600.webp 600w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="The Faith to Flourish cover" width="600" height="600" loading="lazy" decoding="async"></div>
             <p class="shelf-title">The Faith to Flourish</p>
             <p class="shelf-author">Christine Caine</p>
           </li>
           <li>
-            <div class="shelf-cover"><img src="assets/img/books/garden-within.jpg" alt="The Garden Within cover" width="600" height="600" loading="lazy" decoding="async"></div>
+            <div class="shelf-cover"><img src="assets/img/books/garden-within.jpg" srcset="assets/img/books/garden-within-400.webp 400w, assets/img/books/garden-within-600.webp 600w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="The Garden Within cover" width="600" height="600" loading="lazy" decoding="async"></div>
             <p class="shelf-title">The Garden Within</p>
             <p class="shelf-author">Dr. Anita Phillips</p>
           </li>
           <li>
-            <div class="shelf-cover"><img src="assets/img/books/woman-gods-heart.jpg" alt="A Woman After God’s Own Heart cover" width="600" height="600" loading="lazy" decoding="async"></div>
+            <div class="shelf-cover"><img src="assets/img/books/woman-gods-heart.jpg" srcset="assets/img/books/woman-gods-heart-400.webp 400w, assets/img/books/woman-gods-heart-600.webp 600w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="A Woman After God’s Own Heart cover" width="600" height="600" loading="lazy" decoding="async"></div>
             <p class="shelf-title">A Woman After God’s Own Heart</p>
             <p class="shelf-author">Elizabeth George</p>
           </li>
           <li>
-            <div class="shelf-cover"><img src="assets/img/books/study-bible.jpg" alt="How to Study Your Bible cover" width="600" height="600" loading="lazy" decoding="async"></div>
+            <div class="shelf-cover"><img src="assets/img/books/study-bible.jpg" srcset="assets/img/books/study-bible-400.webp 400w, assets/img/books/study-bible-600.webp 600w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="How to Study Your Bible cover" width="600" height="600" loading="lazy" decoding="async"></div>
             <p class="shelf-title">How to Study Your Bible</p>
             <p class="shelf-author">Kay Arthur</p>
           </li>
           <li>
-            <div class="shelf-cover"><img src="assets/img/books/deep-rooted-marriage.jpg" alt="The Deep-Rooted Marriage cover" width="600" height="600" loading="lazy" decoding="async"></div>
+            <div class="shelf-cover"><img src="assets/img/books/deep-rooted-marriage.jpg" srcset="assets/img/books/deep-rooted-marriage-400.webp 400w, assets/img/books/deep-rooted-marriage-600.webp 600w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="The Deep-Rooted Marriage cover" width="600" height="600" loading="lazy" decoding="async"></div>
             <p class="shelf-title">The Deep-Rooted Marriage</p>
             <p class="shelf-author">Dan B. Allender &amp; Steve Call</p>
           </li>
           <li>
-            <div class="shelf-cover"><img src="assets/img/books/timeless-hymns.jpg" alt="Timeless Hymns for Family Worship cover" width="600" height="600" loading="lazy" decoding="async"></div>
+            <div class="shelf-cover"><img src="assets/img/books/timeless-hymns.jpg" srcset="assets/img/books/timeless-hymns-400.webp 400w, assets/img/books/timeless-hymns-600.webp 600w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Timeless Hymns for Family Worship cover" width="600" height="600" loading="lazy" decoding="async"></div>
             <p class="shelf-title">Timeless Hymns for Family Worship</p>
             <p class="shelf-author">Joni Eareckson Tada</p>
           </li>
           <li>
-            <div class="shelf-cover"><img src="assets/img/books/biblio-diet.jpg" alt="The Biblio Diet Study Guide cover" width="600" height="600" loading="lazy" decoding="async"></div>
+            <div class="shelf-cover"><img src="assets/img/books/biblio-diet.jpg" srcset="assets/img/books/biblio-diet-400.webp 400w, assets/img/books/biblio-diet-600.webp 600w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="The Biblio Diet Study Guide cover" width="600" height="600" loading="lazy" decoding="async"></div>
             <p class="shelf-title">The Biblio Diet Study Guide</p>
             <p class="shelf-author">Jordan Rubin &amp; Dr. Josh Axe</p>
           </li>
           <li>
-            <div class="shelf-cover"><img src="assets/img/books/hostess-handbook.jpg" alt="The Hostess Handbook cover" width="600" height="600" loading="lazy" decoding="async"></div>
+            <div class="shelf-cover"><img src="assets/img/books/hostess-handbook.jpg" srcset="assets/img/books/hostess-handbook-400.webp 400w, assets/img/books/hostess-handbook-600.webp 600w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="The Hostess Handbook cover" width="600" height="600" loading="lazy" decoding="async"></div>
             <p class="shelf-title">The Hostess Handbook</p>
             <p class="shelf-author">Maria Zizka</p>
           </li>
