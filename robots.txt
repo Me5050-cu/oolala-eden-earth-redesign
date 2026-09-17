@@ -1,0 +1,4 @@
+# Demo for OoLaLa Unique Gifts & Eden Earth — not for indexing.
+# Every page also carries <meta name="robots" content="noindex, nofollow">.
+User-agent: *
+Disallow: /
