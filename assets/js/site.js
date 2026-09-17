@@ -19,13 +19,20 @@
     });
   }
 
-  // --- header: solid once the hero is behind it ---------------------------------------
+  // --- header: see-through while it sits over a dark film or photo section -------------
   const header = $('[data-header]');
   if (header?.classList.contains('is-overlay')) {
-    const hero = $('.hero');
-    const update = () => header.classList.toggle('is-solid', window.scrollY > Math.max(40, (hero?.offsetHeight || 400) - 90));
+    let queued = false;
+    const update = () => {
+      queued = false;
+      const probe = header.offsetHeight - 1;
+      const under = document.elementsFromPoint(window.innerWidth / 2, probe).find((el) => !header.contains(el));
+      header.classList.toggle('is-solid', !under?.closest('[data-dark]'));
+    };
+    const schedule = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
     update();
-    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
   }
 
   // --- mobile menu ----------------------------------------------------------------------
@@ -42,21 +49,34 @@
   document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape' && menu && !menu.hidden) setMenu(false); });
   window.matchMedia('(min-width: 961px)').addEventListener('change', (m) => { if (m.matches && menu) setMenu(false); });
 
-  // --- hero video --------------------------------------------------------------------------
-  const video = $('.hero-video');
-  const pause = $('[data-video-toggle]');
-  if (video && pause) {
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const label = () => {
-      pause.textContent = video.paused ? 'Play' : 'Pause';
-      pause.setAttribute('aria-label', `${video.paused ? 'Play' : 'Pause'} background video`);
-    };
-    if (reduce.matches) video.pause();
-    video.addEventListener('play', label);
-    video.addEventListener('pause', label);
-    pause.addEventListener('click', () => { if (video.paused) video.play(); else video.pause(); label(); });
-    label();
+  // --- films: play only what is on screen; one control pauses all motion ----------------
+  const videos = $$('video[data-auto]');
+  const toggles = $$('[data-motion-toggle]');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = reduce.matches;
+  const onScreen = new Set();
+  const sync = () => {
+    for (const v of videos) {
+      const visible = onScreen.has(v) && v.getClientRects().length > 0;
+      if (visible && !paused) v.play().catch(() => {});
+      else if (!v.paused) v.pause();
+    }
+    document.body.classList.toggle('motion-paused', paused);
+    for (const t of toggles) {
+      t.textContent = paused ? 'Play' : 'Pause';
+      t.setAttribute('aria-label', `${paused ? 'Play' : 'Pause'} background video`);
+    }
+  };
+  if (videos.length) {
+    const io = new IntersectionObserver((entries) => {
+      for (const en of entries) en.isIntersecting ? onScreen.add(en.target) : onScreen.delete(en.target);
+      sync();
+    }, { threshold: 0.15 });
+    videos.forEach((v) => io.observe(v));
+    window.addEventListener('resize', sync);
   }
+  for (const t of toggles) t.addEventListener('click', () => { paused = !paused; sync(); });
+  sync();
 
   // --- demo forms (no endpoint yet) --------------------------------------------------------------
   for (const form of $$('[data-demo-form]')) {

@@ -18,7 +18,8 @@
   <link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
-  <link rel="preload" as="image" href="assets/media/lake-poster-720.jpg">
+  <link rel="preload" as="image" href="assets/media/lake-poster-720.jpg" media="(max-width: 760px)">
+  <link rel="preload" as="image" href="assets/media/shop-panel-poster.jpg" media="(min-width: 761px)">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"OoLaLa Unique Gifts","description":"OoLaLa is a family boutique on the Georgetown Square: fashion, décor, jewelry, perfume and luxe apothecary, personal styling, and the home of the Eden Earth collection.","telephone":"+15126885707","foundingDate":"2006","image":"https://me5050-cu.github.io/oolala-eden-earth-redesign/assets/img/share.jpg","url":"https://me5050-cu.github.io/oolala-eden-earth-redesign/","address":{"@type":"PostalAddress","streetAddress":"714 S Austin Ave","addressLocality":"Georgetown","addressRegion":"TX","postalCode":"78626","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"12:00","closes":"18:00"}],"department":{"@type":"Store","name":"Eden Earth","sameAs":["https://www.instagram.com/eden.earth/","https://edenearth.shop"]},"sameAs":["https://www.instagram.com/oolalagifts/","https://www.facebook.com/p/OoLala-Georgetown-100054103392312/"]}</script>
 </head>
 <body class="page-home">
@@ -57,105 +58,57 @@
   </header>
   <main id="main">
 
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/media/lake-poster-720.jpg" aria-hidden="true">
+    <section class="slide slide-film" data-hero data-dark aria-labelledby="film-title">
+      <div class="panels">
+        <div class="panel"><video class="panel-video" data-auto muted loop playsinline preload="metadata" poster="assets/media/lake-poster-720.jpg" aria-hidden="true">
           <source src="assets/media/lake-720.mp4" type="video/mp4" media="(max-width: 760px)">
           <source src="assets/media/lake.mp4" type="video/mp4">
-        </video>
+        </video></div>
+        <div class="panel panel-wide"><video class="panel-video" data-auto muted loop playsinline preload="metadata" poster="assets/media/shop-panel-poster.jpg" aria-hidden="true">
+          <source src="assets/media/shop-panel.mp4" type="video/mp4">
+        </video></div>
       </div>
-      <div class="hero-content">
-        <p class="eyebrow on-dark">Unique gifts · Georgetown Square</p>
-        <h1 id="hero-title">Elevated gifting on the Georgetown Square</h1>
-        <p class="hero-lede">Fashion, décor, jewelry, perfume and luxe apothecary, chosen piece by piece. The home of Eden Earth.</p>
-        <div class="btn-row">
-          <a class="btn btn-light" href="visit.html">Plan your visit</a>
-          <a class="btn btn-ghost-light" href="shop.html">Shop Eden Earth</a>
-        </div>
+      <h1 class="film-wordmark" id="film-title"><span aria-hidden="true">OoLaLa</span><span class="sr-only">OoLaLa Unique Gifts, Georgetown Square</span></h1>
+      <div class="film-foot">
+        <p>Unique gifts &amp; Eden Earth<span>714 S Austin Ave · Georgetown Square</span></p>
+        <button class="motion-toggle" type="button" data-motion-toggle>Pause</button>
       </div>
-      <button class="hero-pause" type="button" data-video-toggle aria-label="Pause background video">Pause</button>
     </section>
 
-    <section class="section intro" aria-labelledby="intro-title">
-      <div class="wrap narrow center">
-        <p class="eyebrow">Personal styling &amp; elevated gifting</p>
-        <h2 id="intro-title" class="statement">A family boutique since 2006, on the Square since 2018. Come in for one gift and leave with the whole look.</h2>
+    <section class="slide only-phone" data-dark aria-labelledby="shopfilm-title">
+      <a class="slide-hit" href="visit.html" tabindex="-1" aria-hidden="true"></a>
+      <div class="panels">
+        <div class="panel"><video class="panel-video" data-auto muted loop playsinline preload="none" poster="assets/media/shop-phone-poster.jpg" aria-hidden="true">
+          <source src="assets/media/shop-phone.mp4" type="video/mp4">
+        </video></div>
       </div>
-      <dl class="wrap facts">
-        <div><dt>Open late</dt><dd>Friday &amp; Saturday until 8pm</dd></div>
-        <div><dt>Free gift wrapping</dt><dd>Wrapped at the counter</dd></div>
-        <div><dt>Personal styling</dt><dd>Wardrobe, gifts &amp; home</dd></div>
-      </dl>
+      <div class="slide-label">
+        <p class="slide-kicker">Since 2006 · On the Square since 2018</p>
+        <h2 class="slide-title" id="shopfilm-title">Visit the shop</h2>
+        <p class="slide-text">Fashion, décor, jewelry, perfume and luxe apothecary.</p>
+        <p class="slide-links"><a href="visit.html">Plan a visit</a></p>
+      </div>
     </section>
 
-    <section class="section section-white" aria-labelledby="inside-title">
+    <section class="slide" data-dark aria-labelledby="eden-slide-title">
+      <a class="slide-hit" href="eden-earth.html" tabindex="-1" aria-hidden="true"></a>
+      <div class="panels">
+        <div class="panel"><img class="panel-img" src="assets/img/eden/gods-favorite-lilypads.jpg" srcset="assets/img/eden/gods-favorite-lilypads-400.webp 400w, assets/img/eden/gods-favorite-lilypads-640.webp 640w, assets/img/eden/gods-favorite-lilypads-960.webp 960w, assets/img/eden/gods-favorite-lilypads-1086.webp 1086w" sizes="(max-width: 760px) 100vw, 50vw" alt="Gold God’s Favorite necklaces and earrings resting on lily pads" width="1200" height="1600" loading="lazy" decoding="async"></div>
+        <div class="panel panel-wide"><img class="panel-img" src="assets/img/eden/eden-candle.jpg" srcset="assets/img/eden/eden-candle-400.webp 400w, assets/img/eden/eden-candle-640.webp 640w, assets/img/eden/eden-candle-960.webp 960w, assets/img/eden/eden-candle-1280.webp 1280w, assets/img/eden/eden-candle-1400.webp 1400w" sizes="(max-width: 760px) 100vw, 50vw" alt="The signature Eden candle among white blossoms and willows" width="1200" height="1600" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="slide-label">
+        <p class="slide-kicker">Eden Earth at OoLaLa</p>
+        <h2 class="slide-title" id="eden-slide-title">Rooted in beauty</h2>
+        <p class="slide-text">Faith-rooted jewelry, fragrance and home. In the shop and online.</p>
+        <p class="slide-links"><a href="eden-earth.html">Discover Eden Earth</a><a href="shop.html">Shop online</a></p>
+      </div>
+    </section>
+
+    <section class="home-rail" aria-labelledby="rail-title">
       <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Inside the shop</p>
-          <h2 id="inside-title">Something for everyone on your list</h2>
-        </div>
-        <ul class="tiles">
-          <li class="tile">
-            <figure>
-              <div class="tile-media"><img src="assets/img/shop/floral-dress.jpg" srcset="assets/img/shop/floral-dress-400.webp 400w, assets/img/shop/floral-dress-640.webp 640w, assets/img/shop/floral-dress-960.webp 960w, assets/img/shop/floral-dress-1200.webp 1200w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="White dress with jeweled flower appliqués on a mannequin at OoLaLa" width="1200" height="1600" loading="lazy" decoding="async"></div>
-              <figcaption>
-                <h3>Fashion</h3>
-                <p>Hand-picked clothing, with styling from head to toe.</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="tile">
-            <figure>
-              <div class="tile-media"><img src="assets/img/shop/crystal-clutches.jpg" srcset="assets/img/shop/crystal-clutches-400.webp 400w, assets/img/shop/crystal-clutches-640.webp 640w, assets/img/shop/crystal-clutches-960.webp 960w, assets/img/shop/crystal-clutches-1200.webp 1200w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Gold crystal-studded clutches on a display stand" width="1200" height="1600" loading="lazy" decoding="async"></div>
-              <figcaption>
-                <h3>Jewelry &amp; bags</h3>
-                <p>Crystal clutches, pearls and handmade jewelry.</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="tile">
-            <figure>
-              <div class="tile-media"><img src="assets/img/shop/etagere.jpg" srcset="assets/img/shop/etagere-400.webp 400w, assets/img/shop/etagere-640.webp 640w, assets/img/shop/etagere-960.webp 960w, assets/img/shop/etagere-1200.webp 1200w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Gold étagère styled with frames, gifts and books" width="1200" height="1600" loading="lazy" decoding="async"></div>
-              <figcaption>
-                <h3>Décor &amp; gifts</h3>
-                <p>Frames, gilded trays, books and finishing touches.</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="tile">
-            <figure>
-              <div class="tile-media"><img src="assets/img/shop/candle-jars.jpg" srcset="assets/img/shop/candle-jars-400.webp 400w, assets/img/shop/candle-jars-640.webp 640w, assets/img/shop/candle-jars-960.webp 960w, assets/img/shop/candle-jars-1200.webp 1200w" sizes="(max-width: 960px) 46vw, (max-width: 1320px) 23vw, 300px" alt="Blue and white porcelain candle jars" width="1200" height="1600" loading="lazy" decoding="async"></div>
-              <figcaption>
-                <h3>Perfume &amp; apothecary</h3>
-                <p>Signature scents, candles and bath rituals.</p>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="split" aria-labelledby="eden-title">
-      <div class="split-media"><img src="assets/img/eden/gods-favorite-lilypads.jpg" srcset="assets/img/eden/gods-favorite-lilypads-400.webp 400w, assets/img/eden/gods-favorite-lilypads-640.webp 640w, assets/img/eden/gods-favorite-lilypads-960.webp 960w, assets/img/eden/gods-favorite-lilypads-1086.webp 1086w" sizes="(max-width: 860px) 100vw, 50vw" alt="Gold God’s Favorite necklaces and earrings resting on lily pads" width="1086" height="1448" loading="lazy" decoding="async"></div>
-      <div class="split-body">
-        <p class="eyebrow">Inside OoLaLa</p>
-        <h2 id="eden-title">The home of Eden Earth</h2>
-        <p>After years of helping build this family boutique, Kristina Linde started Eden Earth: jewelry, fragrance, candles, books and slow fashion, all rooted in faith.</p>
-        <p>“More beauty, more truth, more peace, more eternity in the everyday.” Find it in the shop on the Square, or order online.</p>
-        <div class="btn-row">
-          <a class="btn btn-ink" href="eden-earth.html">Meet Eden Earth</a>
-          <a class="link-line" href="shop.html">Shop the collection</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="rail-title">
-      <div class="wrap">
-        <div class="section-head row">
-          <div>
-            <p class="eyebrow">Shop online</p>
-            <h2 id="rail-title">New to the Eden Earth collection</h2>
-          </div>
+        <div class="home-rail-head">
+          <p class="slide-kicker">New in</p>
+          <h2 id="rail-title">The Eden Earth collection</h2>
           <a class="link-line" href="shop.html">Shop all</a>
         </div>
         <ul class="product-grid" data-products data-limit="4">
@@ -199,87 +152,34 @@
       </div>
     </section>
 
-    <section class="exclusives" aria-labelledby="exclusive-title">
-      <div class="wrap">
-        <div class="section-head center">
-          <p class="eyebrow on-dark">In the shop now</p>
-          <h2 id="exclusive-title">Worth a trip to the Square</h2>
-        </div>
-        <div class="exclusive-grid">
-          <article class="exclusive">
-            <div class="exclusive-media"><img src="assets/img/eden/eden-candle.jpg" srcset="assets/img/eden/eden-candle-400.webp 400w, assets/img/eden/eden-candle-640.webp 640w, assets/img/eden/eden-candle-960.webp 960w, assets/img/eden/eden-candle-1280.webp 1280w, assets/img/eden/eden-candle-1400.webp 1400w" sizes="(max-width: 760px) 92vw, (max-width: 1320px) 44vw, 580px" alt="The Eden candle among white blossoms, willows and swans" width="1100" height="1375" loading="lazy" decoding="async"></div>
-            <p class="exclusive-kicker">The signature Eden candle</p>
-            <h3>Verdant air. White petals. Living water.</h3>
-            <p>Hyacinth, white water lily and emerald moss, in a clean-burning candle poured exclusively by Rust &amp; Rose. Available only in the shop at OoLaLa.</p>
-          </article>
-          <article class="exclusive">
-            <div class="exclusive-media"><img src="assets/img/eden/gods-favorite-cross.jpg" srcset="assets/img/eden/gods-favorite-cross-400.webp 400w, assets/img/eden/gods-favorite-cross-640.webp 640w, assets/img/eden/gods-favorite-cross-960.webp 960w, assets/img/eden/gods-favorite-cross-1100.webp 1100w" sizes="(max-width: 760px) 92vw, (max-width: 1320px) 44vw, 580px" alt="Gold cross necklace from God’s Favorite resting on a lily pad" width="1100" height="1375" loading="lazy" decoding="async"></div>
-            <p class="exclusive-kicker">God’s Favorite jewelry</p>
-            <h3>Rings and earrings that each carry a verse</h3>
-            <p>Eden Earth is the first shop to carry the God’s Favorite collection. It restocks often and sells quickly, so come by to see the newest pieces.</p>
-          </article>
-        </div>
+    <section class="slide only-desktop" data-dark aria-labelledby="visit-slide-title">
+      <a class="slide-hit" href="visit.html" tabindex="-1" aria-hidden="true"></a>
+      <div class="panels">
+        <div class="panel"><img class="panel-img" src="assets/img/shop/floral-dress.jpg" srcset="assets/img/shop/floral-dress-400.webp 400w, assets/img/shop/floral-dress-640.webp 640w, assets/img/shop/floral-dress-960.webp 960w, assets/img/shop/floral-dress-1200.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw" alt="White dress with jeweled flower appliqués on a mannequin at OoLaLa" width="1200" height="1600" loading="lazy" decoding="async"></div>
+        <div class="panel panel-wide"><img class="panel-img" src="assets/img/shop/crystal-clutches.jpg" srcset="assets/img/shop/crystal-clutches-400.webp 400w, assets/img/shop/crystal-clutches-640.webp 640w, assets/img/shop/crystal-clutches-960.webp 960w, assets/img/shop/crystal-clutches-1200.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw" alt="Gold crystal-studded clutches on a display stand" width="1200" height="1600" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="slide-label">
+        <p class="slide-kicker">Since 2006 · On the Square since 2018</p>
+        <h2 class="slide-title" id="visit-slide-title">Visit the shop</h2>
+        <p class="slide-text">Fashion, décor, jewelry, perfume and luxe apothecary. Open late Friday &amp; Saturday.</p>
+        <p class="slide-links"><a href="visit.html">Plan a visit</a></p>
       </div>
     </section>
 
-    <section class="section section-white" aria-labelledby="services-title">
-      <div class="wrap">
-        <div class="section-head center">
-          <p class="eyebrow">Beyond the shelves</p>
-          <h2 id="services-title">Let us do the choosing</h2>
+    <section class="home-visit" aria-labelledby="home-visit-title">
+      <div class="wrap home-visit-inner">
+        <div>
+          <p class="slide-kicker">Visit</p>
+          <h2 id="home-visit-title"><a href="https://www.google.com/maps/search/?api=1&query=OoLaLa%20Unique%20Gifts%2C%20714%20S%20Austin%20Ave%2C%20Georgetown%2C%20TX%2078626" target="_blank" rel="noopener">714 S Austin Ave<br>Georgetown, Texas</a></h2>
         </div>
-        <ol class="columns">
-          <li>
-            <span class="columns-n">01</span>
-            <h3>Personal styling</h3>
-            <p>Tell us the occasion and we will pull the outfit, the jewelry and the finishing touch.</p>
-          </li>
-          <li>
-            <span class="columns-n">02</span>
-            <h3>Home design &amp; styling</h3>
-            <p>Kristina brings over 20 years of buying at home and gift markets to finding the right pieces for your rooms, on your budget or on a shopping trip together.</p>
-          </li>
-          <li>
-            <span class="columns-n">03</span>
-            <h3>Gifts, wrapped &amp; shipped</h3>
-            <p>Free gift wrapping at the counter, and orders shipped out quickly.</p>
-          </li>
-        </ol>
-        <p class="center"><a class="btn btn-line" href="visit.html#styling">Request a styling appointment</a></p>
-      </div>
-    </section>
-
-    <section class="section reviews" aria-labelledby="reviews-title">
-      <div class="wrap">
-        <div class="section-head center">
-          <p class="eyebrow">From our shoppers</p>
-          <h2 id="reviews-title" class="rating">4.5 stars on Yelp <span>from 32 reviews</span></h2>
-        </div>
-        <ul class="quotes">
-          <li><blockquote><p>“An absolute jewel on Georgetown’s town square, with many unique and beautiful items.”</p></blockquote></li>
-          <li><blockquote><p>“Beautiful items in a range of prices.”</p></blockquote></li>
-          <li><blockquote><p>“Their customer service is amazing and they ship quickly.”</p></blockquote></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="visit-band" aria-labelledby="visit-title">
-      <div class="visit-band-body">
-        <p class="eyebrow">Visit</p>
-        <h2 id="visit-title">714 S Austin Ave</h2>
-        <p class="visit-city">Georgetown, Texas · on the Georgetown Square</p>
-        <dl class="hours">
+        <div>
+          <dl class="hours">
             <div><dt>Monday – Thursday</dt><dd>10am – 6pm</dd></div>
             <div><dt>Friday &amp; Saturday</dt><dd>10am – 8pm</dd></div>
             <div><dt>Sunday</dt><dd>12pm – 6pm</dd></div>
           </dl>
-        <div class="btn-row">
-          <a class="btn btn-ink" href="https://www.google.com/maps/search/?api=1&query=OoLaLa%20Unique%20Gifts%2C%20714%20S%20Austin%20Ave%2C%20Georgetown%2C%20TX%2078626" target="_blank" rel="noopener">Get directions</a>
-          <a class="link-line" href="tel:+15126885707">(512) 688-5707</a>
+          <p class="home-visit-links"><a class="link-line" href="https://www.google.com/maps/search/?api=1&query=OoLaLa%20Unique%20Gifts%2C%20714%20S%20Austin%20Ave%2C%20Georgetown%2C%20TX%2078626" target="_blank" rel="noopener">Directions</a><a class="link-line" href="tel:+15126885707">(512) 688-5707</a></p>
         </div>
-      </div>
-      <div class="visit-band-map">
-        <iframe title="Map to OoLaLa Unique Gifts" src="https://maps.google.com/maps?q=OoLaLa%20Unique%20Gifts%2C%20714%20S%20Austin%20Ave%2C%20Georgetown%2C%20TX%2078626&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
